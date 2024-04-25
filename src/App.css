@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  background-color: white;
+  color: black;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  height: 88px;
+  position: absolute;
+  left: 180px;
+  top: 0;
+  padding: 16px, 160px, 16px, 160px;
+  border: 0px, 0px, 1px, 0px;
+}
+
+.navbar input {
+  display: flex;
+  width: 372px;
+  height: 56px;
+  padding: 5px 10px;
+  gap: 8px;
+  border-radius: 8px;
+  opacity: 0px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background-color: #F5F5F5;
+  border: none;
+  color: black;
+}
+
+.navbar h2 {
+  color: rgb(179, 179, 179);
+}
+
+.navbar h2:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.navbar-hr {
+  width: 1800px;
+  position: absolute;
+  top: 5rem;
+  left: 0px;
+
+}
