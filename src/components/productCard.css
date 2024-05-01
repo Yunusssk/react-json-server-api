@@ -1,4 +1,24 @@
-.product-container{
+.productContainer{
     background-color: #F6F6F6;
-    
+    width: 266.33px;
+    height: 432px;
+    margin: 12px 8px;
+    padding: 24px 16px;
+    cursor: pointer;
+}
+
+.productImage {
+    width: 160px;
+    height: 160px;
+    background-color: #F6F6F6;
+
+}
+
+.productName {
+    background-color: #F6F6F6;
+
+}
+
+.productPrice {
+    background-color: #F6F6F6;
 }

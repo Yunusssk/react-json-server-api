@@ -1,3 +1,7 @@
+*{
+  background-color: white;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -8,6 +12,7 @@ body {
   color: black;
   position: relative;
   overflow-x: hidden;
+  height: 2256px;
 }
 
 .navbar {
@@ -21,6 +26,7 @@ body {
   top: 0;
   padding: 16px, 160px, 16px, 160px;
   border: 0px, 0px, 1px, 0px;
+  margin: 5px;
 }
 
 .navbar input {
@@ -54,5 +60,23 @@ body {
   position: absolute;
   top: 5rem;
   left: 0px;
+}
 
+.products {
+  position: absolute;
+  right: 160px;
+  top: 200px;
+  width: 990px;
+  height: 1344px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter {
+  width: 256px;
+  height: 760px;
+  background-color: red;
+  position: absolute;
+  left: 20px;
+  top: 200px;
 }

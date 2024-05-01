@@ -1,37 +1,48 @@
-import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import "./productCard.css";
+import Navbar from './components2/Navbar'
 
-const productCard = () => {
-  const [userData, setUserData] = useState([]);
+const ProductCard = (props) => {
+    // eslint-disable-next-line react/prop-types
+    const id = props.id;
+    // eslint-disable-next-line react/prop-types
+    const name = props.name;
+    // eslint-disable-next-line react/prop-types
+    const image = props.image;
+    // eslint-disable-next-line react/prop-types
+    const price = props.price;
 
-  useEffect(() => {
-    // API'den verileri çek
-    fetch("http://localhost:3000/products")
-      .then((response) => response.json())
-      .then((data) => setUserData(data))
-      .catch((error) => console.error("Error fetching users:", error));
-  }, []);
+    console.log(id, name, image, price)
+    return (
+        <>
+            
+                <Navbar />
+                <div onClick={useParams} className="productContainer" key={id}>
+                    <img className="productImage" src={image}></img>
+                    <p className="productName">{name}</p>
+                    <p className="productPrice">{price}</p>
+                    {/* <p>{id}</p> */}
+                    
+                </div>
+            
+            {/*<div className="product-container">*/}
+            {/*  {userData.map((products) => (*/}
+            {/*    <div key={products.id}>*/}
+            {/*      /!* <img src={user.image_picture} alt={user.name} /> *!/*/}
+            {/*      /!* <p>{user.yazi1}</p>*/}
+            {/*      <p>{user.yazi2}</p> *!/*/}
+            {/*      /!* <p>*/}
+            {/*        {user.yazi3}*/}
+            {/*        {user.yazi4}*/}
+            {/*      </p> *!/*/}
+            {/*    </div>*/}
+            {/*  ))}*/}
 
-  return (
-    <>
-      <div className="product-container">
-        {userData.map((products) => (
-          <div key={products.id}>
-            {/* <img src={user.image_picture} alt={user.name} /> */}
-            {/* <p>{user.yazi1}</p>
-            <p>{user.yazi2}</p> */}
-            {/* <p>
-              {user.yazi3}
-              {user.yazi4}
-            </p> */}
-          </div>
-        ))}
-
-        <div>
-          <img src={userData[0].image_picture} alt={userData[0].name} />
-        </div>
-      </div >
-    </>
-  )
+            {/*  <div>*/}
+            {/*    <img src={userData[0].image_picture} alt={userData[0].name} />*/}
+            {/*  </div>*/}
+            {/*</div >*/}
+        </>
+    )
 }
-export default productCard;
+export default ProductCard;
